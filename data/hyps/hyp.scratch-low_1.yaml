@@ -1,0 +1,82 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# Hyperparameters for low-augmentation COCO training from scratch
+# python train.py --batch 64 --cfg yolov5n6.yaml --weights '' --data coco.yaml --img 640 --epochs 300 --linear
+# See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
+
+lr0: 0.0001  # initial learning rate (SGD=1E-2, Adam=1E-3) 初始学习率 0.001 0.0001
+lrf: 0.01  # final OneCycleLR learning rate (lr0 * lrf)  lr0 * lrf 最后学习率 1e-4 到 1e-6
+
+momentum: 0.937  # SGD momentum/Adam beta1  动量系数。不动
+weight_decay: 0.0005  # optimizer weight decay 5e-4  正则化系数 。过拟合，就可以调大一些。0.005
+
+warmup_epochs: 0.0  # warmup epochs (fractions ok) 前3个epoch预热。让模型适应性学习。
+warmup_momentum: 0.8  # warmup initial momentum
+warmup_bias_lr: 0.1  # warmup initial bias lr
+
+
+# 类别误检：cls 和 cls_pw 同时调大 * cls:1.5, cls_pw:1.5 检出，但是类别错了
+# 把背景认成了目标：obj_pw，obj同时调大，变成1.5 背景错误
+
+# 位置损失不下降，才调大box  应该先去查标签
+
+box: 0.05  # box loss gain   位置损失系数。一般不要动。
+cls: 0.5  # cls loss gain  类别损失系数。
+obj: 1.0  # obj loss gain (scale with pixels) 置信度损失系数
+# total = 0.05 CIOU_Loss + 1.0 BCE_CONF + 0.5 BCE_CLASS
+
+# 分类，BCE(pos_weight=1.0)，是这个函数的功能。
+cls_pw: 1.0  # cls BCELoss positive_weight  正样本类别的损失系数。
+# 置信度，BCE(pos_weight=1.0)，是这个函数的功能。 正样本类别的损失系数
+obj_pw: 1.0  # obj BCELoss positive_weight
+
+iou_t: 0.20  # IoU training threshold 没有使用。源码中被注释掉了。选正样本，最原始的方法是比如iou>0.2为正样本。
+anchor_t: 4.0  # anchor-multiple threshold yolov5选anchor的方法。0.25-4.0之间。
+
+# anchors: 3  # anchors per output layer (0 to ignore)
+fl_gamma: 1.5  # focal loss gamma (efficientDet default gamma=1.5) 焦点损失，不开启此项。gamma=1.5/2.0,alpha=0.25
+
+# P或R,精度一般要在90%以上时(做为初始权重)，才开启此项。最佳的时候93%以上.
+# 精度太低，说明模型没有学到重要特征，噪声过多。
+# 标签要正确
+
+# hsv，这主要是带来色彩、色调上的变化，增加泛化能力。
+# 什么时候关闭
+# 工业图像关闭。目标主要特征是颜色时也要关闭。
+hsv_h: 0.015  # image HSV-Hue augmentation (fraction)
+hsv_s: 0.7  # image HSV-Saturation augmentation (fraction)
+hsv_v: 0.4  # image HSV-Value augmentation (fraction)
+
+# 旋转 +-15 之间
+degrees: 12  # image rotation (+/- deg)
+
+# 平移，四个方向，随机 10%
+translate: 0.1  # image translation (+/- fraction)
+
+# 缩放50% ,小目标要关
+scale: 0.5  # image scale (+/- gain)
+
+# 裁剪
+shear: 0.1  # image shear (+/- deg)
+
+# 透视变换，不要用此增强。在线不可控
+perspective: 0.0  # image perspective (+/- fraction), range 0-0.001
+
+# 上下翻转
+flipud: 0.5  # image flip up-down (probability)
+
+# 左右翻转
+fliplr: 0.5  # image flip left-right (probability)
+
+# mosic 小目标关
+mosaic: 1.0  # image mosaic (probability)
+
+# 多模板迭代：
+# 前期版本开(会有大量误检，会提高R)，后期版本关闭(提高P, 。
+mixup: 0.1  # image mixup (probability)
+
+# 只在分割时有效
+copy_paste: 0.0  # segment copy-paste (probability)
+
+bgr: 0.3 # 代表，rgb->gbr来训练 自己增加的
+
+# bianhuan_light: 0.3
