@@ -1,0 +1,5 @@
+﻿文件,原类别,修正类别,依据
+train/labels/nozzle_extrusion_normal_0004.txt,0,1,人工复核
+train/labels/nozzle_heavy_contamination_0001.txt,0,1,人工复核
+train/labels/nozzle_slight_contamination_0006.txt,0,1,人工复核
+train/labels/nozzle_tip_wrapped_0728.txt,1,0,人工复核

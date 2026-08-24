@@ -1,0 +1,17 @@
+{
+  "数据集": "/mnt/d/ruanjianxiazai/pycharm2026/datasets/dataset_2_binary_clean_v2",
+  "图片数": 3671,
+  "pHash": "32×32灰度DCT低频8×8，64位",
+  "pHash阈值": 0.9,
+  "最大汉明距离": 6,
+  "SSIM": "64×64灰度、11×11局部窗口",
+  "SSIM阈值": 0.85,
+  "pHash候选对": 112387,
+  "通过SSIM候选对": 1348,
+  "候选划分组合": {
+    "test-test": 109,
+    "train-train": 1105,
+    "val-val": 134
+  },
+  "说明": "仅生成候选，未删除图片"
+}
