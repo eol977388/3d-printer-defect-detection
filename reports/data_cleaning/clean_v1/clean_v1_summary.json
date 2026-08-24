@@ -1,0 +1,53 @@
+{
+  "源数据集": "/mnt/d/ruanjianxiazai/pycharm2026/datasets/dataset_2",
+  "输出数据集": "/mnt/d/ruanjianxiazai/pycharm2026/datasets/dataset_2_binary_clean_v1",
+  "创建方式": "复制后清洗，源数据集未修改",
+  "处理的完全重复组": 916,
+  "删除图片": 916,
+  "删除标签": 916,
+  "人工修正标签": 4,
+  "处理前": {
+    "train": {
+      "图片": 3289,
+      "标签": 3289
+    },
+    "val": {
+      "图片": 704,
+      "标签": 704
+    },
+    "test": {
+      "图片": 706,
+      "标签": 706
+    }
+  },
+  "处理后": {
+    "train": {
+      "图片": 2647,
+      "标签": 2647
+    },
+    "val": {
+      "图片": 568,
+      "标签": 568
+    },
+    "test": {
+      "图片": 568,
+      "标签": 568
+    }
+  },
+  "保留来源前缀": {
+    "nozzle_no_extrusion": 914,
+    "nozzle_slight_contamination": 2
+  },
+  "保留划分到删除划分": {
+    "test→test": 19,
+    "test→train": 92,
+    "test→val": 23,
+    "train→test": 99,
+    "train→train": 450,
+    "train→val": 85,
+    "val→test": 20,
+    "val→train": 100,
+    "val→val": 28
+  },
+  "清洗后完全重复组": 0
+}

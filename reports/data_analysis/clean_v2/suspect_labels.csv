@@ -1,0 +1,2 @@
+﻿数据划分,图片路径,标签路径,标签行号,文件名前缀,当前类别,疑似问题,判断依据,审核状态,最终处理,审核人,备注
+test,/mnt/d/ruanjianxiazai/pycharm2026/datasets/dataset_2_binary_clean_v2/test/images/nozzle_heavy_contamination_0011.jpg,/mnt/d/ruanjianxiazai/pycharm2026/datasets/dataset_2_binary_clean_v2/test/labels/nozzle_heavy_contamination_0011.txt,1,nozzle_heavy_contamination,0,prefix_majority_class_mismatch,"majority=1, 20/21",pending,,,

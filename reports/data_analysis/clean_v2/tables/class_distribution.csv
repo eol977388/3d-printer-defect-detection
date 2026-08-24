@@ -1,0 +1,7 @@
+﻿数据划分,类别编号,类别名称,目标框数量,占比
+train,0,nozzle_wrapped,922,0.35889451148306734
+train,1,nozzle_not_wrapped,1647,0.6411054885169326
+val,0,nozzle_wrapped,197,0.35818181818181816
+val,1,nozzle_not_wrapped,353,0.6418181818181818
+test,0,nozzle_wrapped,199,0.3605072463768116
+test,1,nozzle_not_wrapped,353,0.6394927536231884
