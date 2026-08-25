@@ -1,0 +1,133 @@
+{
+  "数据版本": "dataset_2_abnormal_binary_clean_v3",
+  "源数据集": "/mnt/d/ruanjianxiazai/pycharm2026/datasets/dataset_2_binary_clean_v2",
+  "输出数据集": "/mnt/d/ruanjianxiazai/pycharm2026/datasets/dataset_2_abnormal_binary_clean_v3",
+  "业务定义": {
+    "0": "nozzle_normal（无异常）",
+    "1": "nozzle_abnormal（异常）"
+  },
+  "映射": {
+    "0": [
+      "nozzle_clean",
+      "nozzle_extrusion_normal",
+      "nozzle_no_extrusion"
+    ],
+    "1": [
+      "nozzle_heavy_contamination",
+      "nozzle_slight_contamination",
+      "nozzle_tip_wrapped"
+    ],
+    "删除": [
+      "camera_occlusion"
+    ]
+  },
+  "处理前": {
+    "train": {
+      "图片": 2569,
+      "标签": 2569,
+      "标注框": 2569,
+      "类别": {
+        "0": 922,
+        "1": 1647
+      },
+      "文件名前缀": {
+        "camera_occlusion": 1,
+        "nozzle_clean": 5,
+        "nozzle_extrusion_normal": 1056,
+        "nozzle_heavy_contamination": 9,
+        "nozzle_no_extrusion": 573,
+        "nozzle_slight_contamination": 4,
+        "nozzle_tip_wrapped": 921
+      }
+    },
+    "val": {
+      "图片": 550,
+      "标签": 550,
+      "标注框": 550,
+      "类别": {
+        "0": 197,
+        "1": 353
+      },
+      "文件名前缀": {
+        "nozzle_extrusion_normal": 261,
+        "nozzle_heavy_contamination": 7,
+        "nozzle_no_extrusion": 83,
+        "nozzle_slight_contamination": 2,
+        "nozzle_tip_wrapped": 197
+      }
+    },
+    "test": {
+      "图片": 552,
+      "标签": 552,
+      "标注框": 552,
+      "类别": {
+        "0": 199,
+        "1": 353
+      },
+      "文件名前缀": {
+        "nozzle_clean": 2,
+        "nozzle_extrusion_normal": 199,
+        "nozzle_heavy_contamination": 5,
+        "nozzle_no_extrusion": 146,
+        "nozzle_slight_contamination": 2,
+        "nozzle_tip_wrapped": 198
+      }
+    }
+  },
+  "处理后": {
+    "train": {
+      "图片": 2568,
+      "标签": 2568,
+      "标注框": 2568,
+      "类别": {
+        "0": 1634,
+        "1": 934
+      },
+      "文件名前缀": {
+        "nozzle_clean": 5,
+        "nozzle_extrusion_normal": 1056,
+        "nozzle_heavy_contamination": 9,
+        "nozzle_no_extrusion": 573,
+        "nozzle_slight_contamination": 4,
+        "nozzle_tip_wrapped": 921
+      }
+    },
+    "val": {
+      "图片": 550,
+      "标签": 550,
+      "标注框": 550,
+      "类别": {
+        "0": 344,
+        "1": 206
+      },
+      "文件名前缀": {
+        "nozzle_extrusion_normal": 261,
+        "nozzle_heavy_contamination": 7,
+        "nozzle_no_extrusion": 83,
+        "nozzle_slight_contamination": 2,
+        "nozzle_tip_wrapped": 197
+      }
+    },
+    "test": {
+      "图片": 552,
+      "标签": 552,
+      "标注框": 552,
+      "类别": {
+        "0": 347,
+        "1": 205
+      },
+      "文件名前缀": {
+        "nozzle_clean": 2,
+        "nozzle_extrusion_normal": 199,
+        "nozzle_heavy_contamination": 5,
+        "nozzle_no_extrusion": 146,
+        "nozzle_slight_contamination": 2,
+        "nozzle_tip_wrapped": 198
+      }
+    }
+  },
+  "重映射图片及标签": 3670,
+  "删除camera_occlusion": 1,
+  "框坐标变化": 0,
+  "源clean_v2是否修改": false
+}

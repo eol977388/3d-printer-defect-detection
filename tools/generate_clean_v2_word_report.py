@@ -110,6 +110,8 @@ def main():
             continue
         flush_table()
         stripped = line.strip()
+        if stripped.startswith("!["):
+            continue
         if stripped == "## 6. 分析图表":
             add_figures(document, args.figures)
             figures_inserted = True
@@ -138,7 +140,7 @@ def main():
         add_figures(document, args.figures)
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    footer.text = "3D打印机缺陷检测项目｜clean_v2训练前数据复检"
+    footer.text = "3D打印机缺陷检测项目｜训练前数据分析与复检"
     args.output.parent.mkdir(parents=True, exist_ok=True)
     document.save(args.output)
     print(args.output)
