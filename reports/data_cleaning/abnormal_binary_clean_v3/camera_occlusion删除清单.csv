@@ -1,0 +1,2 @@
+﻿数据划分,图片,标签,原始类别,处理,原因
+train,train/images/camera_occlusion_0001.jpg,train/labels/camera_occlusion_0001.txt,camera_occlusion,删除图片及标签,业务确认camera_occlusion不纳入本项目

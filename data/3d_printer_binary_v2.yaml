@@ -1,0 +1,12 @@
+# 3D printer nozzle wrapping detection dataset (clean_v2)
+# Dataset root: D:/ruanjianxiazai/pycharm2026/datasets/dataset_2_binary_clean_v2
+
+path: ../datasets/dataset_2_binary_clean_v2
+train: train/images
+val: val/images
+test: test/images
+
+nc: 2
+names:
+  0: nozzle_wrapped
+  1: nozzle_not_wrapped

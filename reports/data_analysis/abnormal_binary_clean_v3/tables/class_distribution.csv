@@ -1,0 +1,7 @@
+﻿数据划分,类别编号,类别名称,目标框数量,占比
+train,0,nozzle_normal,1634,0.6362928348909658
+train,1,nozzle_abnormal,934,0.3637071651090343
+val,0,nozzle_normal,344,0.6254545454545455
+val,1,nozzle_abnormal,206,0.37454545454545457
+test,0,nozzle_normal,347,0.6286231884057971
+test,1,nozzle_abnormal,205,0.3713768115942029

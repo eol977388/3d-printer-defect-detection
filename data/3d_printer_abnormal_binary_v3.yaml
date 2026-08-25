@@ -1,0 +1,12 @@
+# 3D打印机喷嘴正常/异常二分类数据集（clean_v3）
+# 由clean_v2继承清洗和划分结果，删除camera_occlusion后重新映射业务标签。
+
+path: ../datasets/dataset_2_abnormal_binary_clean_v3
+train: train/images
+val: val/images
+test: test/images
+
+nc: 2
+names:
+  0: nozzle_normal
+  1: nozzle_abnormal
