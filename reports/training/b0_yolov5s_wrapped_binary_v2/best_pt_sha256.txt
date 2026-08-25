@@ -1,0 +1,3 @@
+SHA256 的 runs\train\b0_yolov5s_standard_50e_b16_w2_seed0\weights\best.pt 哈希:
+0e579dc6795b9452c8aafc5715d6ed279b4463ed57c87138d837cf306ee22d56
+CertUtil: -hashfile 命令成功完成。
